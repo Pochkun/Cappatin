@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <style>
+    .loading-bro {
+      margin: 50px auto;
+      width: 250px;
+    }
+
+    .loading-bro > span {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 1em;
+      font-weight: 300;
+      color: #262626;
+    }
+
+    #load {
+      width: 40px;
+      animation: loading 2.5s linear infinite;
+    }
+
+    #load #loading-inner {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 300;
+      stroke-width: 10;
+      stroke-miterlimit: 10;
+      stroke-linecap: round;
+      animation: loading-circle 2s linear infinite;
+      stroke: #262626;
+      fill: transparent;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes loading-circle {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -600;
+      }
+    }
+  </style>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #262626; margin: 0">
+  <div id="root">
+    <div style="
+	  background: #fff;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;">
+      <div class="loading-bro">
+        <svg id="load" x="0px" y="0px" viewBox="0 0 150 150">
+          <circle id="loading-inner" cx="75" cy="75" r="60"></circle>
+        </svg>
+        <span>Please wait...</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
