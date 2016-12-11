@@ -26,5 +26,3 @@ app.listen(8080, '0.0.0.0', function (err) {
     }
     console.log('Listening at http://localhost:8080');
 })
-import React from "react"
-
