@@ -25,4 +25,4 @@ app.listen(8080, '0.0.0.0', function (err) {
         return;
     }
     console.log('Listening at http://localhost:8080');
-});
+})
